@@ -28,7 +28,7 @@ def test_suite():
     success = "PASSED" if output == None else "FAIL"
     print(f"{'3':>3}{'|':>9}{str(output):>8}{'|':>9}{'None':>9}{'|':>8}{success:>11}{'|':>7}  {(end-start):.7f}{'|':>3}  The exit is unreachable")
     
-    # Example 4, expect 15
+    # Example 4, expect 16
     data_no_sword = {'size': 5,'entrance': (0, 2),'exit': (0, 4),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]}
     start = time.time()
     output = optimal_path(data_no_sword)
