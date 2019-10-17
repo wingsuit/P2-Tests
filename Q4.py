@@ -1,3 +1,11 @@
+import time
+def run_test(num, data, expected, explanation):
+    start = time.time()
+    output = str(optimal_path(data))
+    end = time.time()
+    success = "PASSED" if output == expected else "FAIL"
+    print(f"{num:>3}{'|':>9}{output:>8}{'|':>9}{expected:>9}{'|':>8}{success:>11}{'|':>7}  {(end-start):.7f}{'|':>3}  {explanation}")
+   
 def test():
     tests = [
         (
