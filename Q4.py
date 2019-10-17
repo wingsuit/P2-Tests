@@ -27,6 +27,16 @@ def test():
             {'size': 5,'entrance': (0, 2),'exit': (0, 4),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
             '16',
             "No sword"
+        ),
+        (
+            {'size': 6, 'entrance': (0, 1), 'exit': (0,5), 'dragon': (0, 3), 'sword': (0, 0)},
+            '6',
+            "No treasure or walls. Grab sword kill dragon exit"
+        ),
+        (
+            {'size': 6, 'entrance': (0, 1), 'exit': (0,5), 'dragon': (0, 3)},
+            '8',
+            "No treasure, walls or sword. Walk around dragon"
         )
     ]
     
