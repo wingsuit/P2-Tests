@@ -47,6 +47,11 @@ def test():
             {'size': 6, 'entrance': (0, 0), 'exit': (0,1)},
             '1',
             "Just entrance and exit, close"
+        ),
+        (
+            {'size': 6, 'entrance': (0, 0), 'exit': (2, 2), 'walls': [(0, 1), (1, 1), (1, 0)]},
+            'None',
+            "Just entrance and exit, but exit unreachable"
         )
     ]
     
