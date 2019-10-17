@@ -1,4 +1,3 @@
-## Test Code ##
 import time
 def run_test(num, data, expected, explanation):
     start = time.time()
@@ -6,7 +5,7 @@ def run_test(num, data, expected, explanation):
     end = time.time()
     success = "PASSED" if output == expected else "FAIL"
     print(f"{num:>3}{'|':>9}{output:>8}{'|':>9}{expected:>9}{'|':>8}{success:>11}{'|':>7}  {(end-start):.7f}{'|':>3}  {explanation}")
-   
+
 def test():
     tests = [
         (
@@ -62,6 +61,10 @@ def test():
             "14",
             "Big, no sword, dragon and 3 treasure"
         ),(
+            {'size': 50,'entrance': (0, 0),'exit': (49, 0),'sword': (20, 49),'treasure': [(0, 2)], 'dragon': (20, 0)},
+            "53",
+            "Big and empty"
+        ),(
             {'size': 50,'entrance': (0, 2),'exit': (49, 20),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
             "73",
             "Big"
@@ -80,4 +83,3 @@ def test():
         num += 1
         
 test()
-## Test Code ##
