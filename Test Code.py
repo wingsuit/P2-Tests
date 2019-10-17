@@ -1,6 +1,6 @@
 def test_suite():
     
-    print(" Test #    |    Recieved    |    Expected    |    PASS/FAIL    |    Time     |    Test Type")
+    print(" Test #    |    Received    |    Expected    |    PASS/FAIL    |    Time     |    Test Type")
     print("-----------------------------------------------------------------------------------------------------")
     
     #Example 1, expect 23
