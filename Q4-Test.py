@@ -50,25 +50,37 @@ def test():
             '8',
             "Quicker without the sword"
         ),(
-            {'size': 7,'entrance': (0, 0),'exit': (6, 6),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
+            {'size': 10,'entrance': (0, 0),'exit': (9, 9),'dragon': (0, 9),'sword': (9, 0),'treasure': [(5, 5)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "18",
-            "Big"
+            "Big with unnecessary sword"
+        ),(
+            {'size': 10,'entrance': (0, 0),'exit': (9, 9),'dragon': (0, 9),'treasure': [(5, 5)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
+            "18",
+            "Big without sword"
+        ),(
+            {'size': 8,'entrance': (0, 0),'exit': (7, 7),'treasure': [(5, 5), (1, 1), (6, 7)]},
+            "14",
+            "Big, no sword, dragon and 3 treasure"
         ),(
             {'size': 8,'entrance': (0, 0),'exit': (7, 7),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "20",
-            "Bigger"
+            "Big 1"
         ),(
             {'size': 9,'entrance': (0, 0),'exit': (8, 8),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "22",
-            "Biggerrr"
+            "Big 2"
         ),(
             {'size': 10,'entrance': (0, 0),'exit': (9, 9),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "24",
-            "Biggest"
+            "Big 3"
         ),(
             {'size': 11,'entrance': (0, 0),'exit': (10, 10),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "26",
-            "Biggest"
+            "Big 4"
+        ),(
+            {'size': 2000,'entrance': (0, 2),'exit': (1999, 999),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
+            "3008",
+            "WTF"
         )
     ]
     
