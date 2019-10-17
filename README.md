@@ -1,2 +1,2 @@
-# P2Q4
-University of Melbourne COMP10001 Project 2 Question 4 Test Code
+# P2-Tests
+University of Melbourne COMP10001 Project 2 Question Test Code
