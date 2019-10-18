@@ -1,3 +1,4 @@
+from program import optimal_path
 import time
 def run_test(num, data, expected, explanation):
     start = time.time()
@@ -16,6 +17,10 @@ def test():
             {'size': 5,'entrance': (0, 2),'exit': (0, 4),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
             "14",
             "Example 2"
+        ),(
+            {'size': 5,'entrance': (1, 0),'exit': (4, 4),'sword': (4, 0),'dragon': (1, 2),'treasure': [(0, 0), (0, 4)]},
+            '15',
+            "Example from Tia"
         ),(
             {'size': 5,'entrance': (0, 2),'exit': (4, 4),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(4,3),(3,4),(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
             'None',
@@ -82,4 +87,4 @@ def test():
         run_test(num, data, expected, explanation)
         num += 1
         
-test()
+#test()
