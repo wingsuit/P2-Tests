@@ -1,4 +1,5 @@
 import time
+import Q4-Brute
 
 def run_test(num, data, expected, explanation):
     start = time.time()
