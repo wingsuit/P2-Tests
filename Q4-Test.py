@@ -1,5 +1,6 @@
 from program import optimal_path
 import time
+
 def run_test(num, data, expected, explanation):
     start = time.time()
     output = str(optimal_path(data))
@@ -18,9 +19,25 @@ def test():
             "14",
             "Example 2"
         ),(
+            {'size': 4,'entrance': (0, 3),'exit': (3, 3),'sword': (0, 0),'dragon': (3, 2),'treasure': [(1, 3)]},
+            "9",
+            "Quicker to go sword first then treasure."
+        ),(
+            {'size': 4,'entrance': (0, 2),'exit': (3, 3),'treasure': [(0, 0), (0, 3), (1, 3)]},
+            "8",
+            "Quicker to go to furthest treasure first."
+        ),(
+            {'size': 5,'entrance': (1, 1),'exit': (4, 0), 'sword': (4, 4), 'dragon': (4,1), 'treasure': [(0, 1), (1, 0), (2, 1)], 'walls': [(1, 3), (2, 3), (3, 3), (4, 3)]},
+            "22",
+            "Complicated cave."
+        ),(
             {'size': 5,'entrance': (1, 0),'exit': (4, 4),'sword': (4, 0),'dragon': (1, 2),'treasure': [(0, 0), (0, 4)]},
             '15',
             "Example from Tia"
+        ),(
+            {'size': 5,'entrance': (1, 0),'exit': (4, 4),'sword': (3, 0),'dragon': (1, 2),'treasure': [(0, 0), (0, 4)]},
+            '13',
+            "Updated example from Tia"
         ),(
             {'size': 5,'entrance': (0, 2),'exit': (4, 4),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(4,3),(3,4),(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
             'None',
@@ -40,11 +57,7 @@ def test():
         ),(
             {'size': 6, 'entrance': (5, 5), 'exit': (0,1)},
             '9',
-            "Just entrance and exit, far"
-        ),(
-            {'size': 6, 'entrance': (0, 0), 'exit': (0,1)},
-            '1',
-            "Just entrance and exit, close"
+            "Just entrance and exit"
         ),(
             {'size': 6, 'entrance': (0, 0), 'exit': (2, 2), 'walls': [(0, 1), (1, 1), (1, 0)]},
             'None',
@@ -53,38 +66,14 @@ def test():
             {'size': 5,'entrance': (0, 2),'exit': (0, 4),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (3, 4)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
             '8',
             "Quicker without the sword"
-        ),(
-            {'size': 10,'entrance': (0, 0),'exit': (9, 9),'dragon': (0, 9),'sword': (9, 0),'treasure': [(5, 5)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
-            "18",
-            "Big with unnecessary sword"
-        ),(
-            {'size': 10,'entrance': (0, 0),'exit': (9, 9),'dragon': (0, 9),'treasure': [(5, 5)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
-            "18",
-            "Big without sword"
-        ),(
-            {'size': 8,'entrance': (0, 0),'exit': (7, 7),'treasure': [(5, 5), (1, 1), (6, 7)]},
-            "14",
-            "Big, no sword, dragon and 3 treasure"
-        ),(
-            {'size': 50,'entrance': (0, 0),'exit': (49, 0),'sword': (20, 49),'treasure': [(0, 2)], 'dragon': (20, 0)},
-            "53",
-            "Big and empty"
-        ),(
-            {'size': 50,'entrance': (0, 2),'exit': (49, 20),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
-            "73",
-            "Big"
-        ),(
-            {'size': 2000,'entrance': (0, 2),'exit': (99, 69),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
-            "172",
-            "Bigger"
         )
     ]
     
     print(" Test #    |    Received    |    Expected    |    PASS/FAIL    |    Time     |    Test Type")
     print("-----------------------------------------------------------------------------------------------------")
     num = 1
-    for data, expected, explanation in tests:
-        run_test(num, data, expected, explanation)
+    for cavem, expected, explanation in tests:
+        run_test(num, cavem, expected, explanation)
         num += 1
-        
-#test()
+
+test()
