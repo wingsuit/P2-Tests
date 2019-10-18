@@ -1,4 +1,3 @@
-from program import optimal_path
 import time
 
 def run_test(num, data, expected, explanation):
