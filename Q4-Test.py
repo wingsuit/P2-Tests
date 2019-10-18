@@ -22,9 +22,9 @@ def test():
             "9",
             "Quicker to go sword first then treasure."
         ),(
-            {'size': 4,'entrance': (0, 2),'exit': (3, 3),'treasure': [(0, 0), (0, 3), (1, 3)]},
-            "8",
-            "Quicker to go to furthest treasure first."
+            {'size': 4,'entrance': (0, 0),'exit': (0, 3), 'sword': (3, 3)},
+            "3",
+            "No treasure just an unnecesary sword."
         ),(
             {'size': 5,'entrance': (1, 1),'exit': (4, 0), 'sword': (4, 4), 'dragon': (4,1), 'treasure': [(0, 1), (1, 0), (2, 1)], 'walls': [(1, 3), (2, 3), (3, 3), (4, 3)]},
             "22",
