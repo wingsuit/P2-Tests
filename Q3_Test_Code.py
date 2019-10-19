@@ -34,6 +34,8 @@ def test():
             "Example 2 but with sword",
         )
     ]
+
+    ##Test
     
     print(" Test #    |    Received    |    Expected    |    PASS/FAIL    |    Time     |    Test Type")
     print("-----------------------------------------------------------------------------------------------------")
