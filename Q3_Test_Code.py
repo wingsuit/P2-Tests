@@ -1,4 +1,3 @@
-## Test Code ##
 import time
 def run_test(num, data, ent, ex, sword, expected, explanation):
     start = time.time()
@@ -43,4 +42,3 @@ def test():
         num += 1
         
 test()
-## Test Code ##
