@@ -67,7 +67,7 @@ def test():
             "Quicker without the sword"
         )
     ]
-    
+
     print(" Test #    |    Received    |    Expected    |    PASS/FAIL    |    Time     |    Test Type")
     print("-----------------------------------------------------------------------------------------------------")
     num = 1

@@ -1,3 +1,4 @@
+from Q3 import shortest_path
 import time
 def run_test(num, data, ent, ex, sword, expected, explanation):
     start = time.time()
@@ -40,5 +41,5 @@ def test():
     for data, ent, ex, sword, expected, explanation in tests:
         run_test(num, data, ent, ex, sword, expected, explanation)
         num += 1
-        
+
 test()
