@@ -17,31 +17,34 @@ def test():
             {'size': 4,'entrance': (0, 0),'exit': (2, 1),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "[['@', '.', 'W', '.'], ['.', '#', '#', '$'], ['.', 'X', '#', '#'], ['.', '.', '.', 't']]",
             "Example 1"
-        ),
-        (
+        ),(
             {'size': 4, 'entrance':(0, 0)},
             'None',
             "Example 2, no exit"
-        ),
-        (
+        ),(
             {'size': 4,'entrance': (0, 0),'exit': (4, 1),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "None",
             "Exit out of bounds"
-        ),
-        (
+        ),(
             {'size': 4,'entrance': (0, 0),'exit': (2, 1),'dragon': (4, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "None",
             "Dragon out of bounds"
-        ),
-        (
+        ),(
             {'size': 4,'entrance': (0, 0),'exit': (2, 1),'dragon': (0, 2),'sword': (3, 3),'treasure': [(1, 1), (1, 2), (1, 3), (2, 2)],'walls': [(2, 3)]},
             "None",
             "Too many treasures"
-        ),
-        (
+        ),(
             {'size': 4,'entrance': (0, 0),'exit': (2, 1),'dragon': (0, 1),'sword': (3, 3),'treasure': [(1, 1), (1, 2), (1, 3)],'walls': [(2, 3)]},
             "None",
             "Dragon near entrance"
+        ),(
+            {'size': 4,'entrance': (-1, 0),'exit': (2, 1),'dragon': (3, 2),'sword': (3, 3),'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
+            "None",
+            "Entrance out of bounds"
+        ),(
+            {'size': 4,'entrance': (0, 0),'exit': (2, 1),'dragon': (3, 2),'sword': [(3, 3)],'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
+            "None",
+            "Sword not given as tuple"
         )
     ]
     
