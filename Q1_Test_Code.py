@@ -1,5 +1,6 @@
 import time
 
+
 def run_test(num, data, expected, explanation):
     start = time.time()
     output = str(build_cave(data))
@@ -8,7 +9,8 @@ def run_test(num, data, expected, explanation):
     output = "Cave" if output != 'None' else output
     expected = "Cave" if expected != 'None' else expected
     print(f"{num:>3}{'|':>9}{output:>8}{'|':>9}{expected:>9}{'|':>8}{success:>11}{'|':>7}  {(end-start):.7f}{'|':>3}  {explanation}")
-    
+
+
 def test():
     tests = [
         (
@@ -49,6 +51,5 @@ def test():
     for data, expected, explanation in tests:
         run_test(num, data, expected, explanation)
         num += 1
-        
+
 test()
-## Test Code ##

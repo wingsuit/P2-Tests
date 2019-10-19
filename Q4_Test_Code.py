@@ -1,11 +1,13 @@
 import time
 
+
 def run_test(num, data, expected, explanation):
     start = time.time()
     output = str(optimal_path(data))
     end = time.time()
     success = "PASSED" if output == expected else "FAIL"
     print(f"{num:>3}{'|':>9}{output:>8}{'|':>9}{expected:>9}{'|':>8}{success:>11}{'|':>7}  {(end-start):.7f}{'|':>3}  {explanation}")
+
 
 def test():
     tests = [
@@ -24,7 +26,7 @@ def test():
         ),(
             {'size': 4,'entrance': (0, 0),'exit': (0, 3), 'sword': (3, 3)},
             "3",
-            "No treasure just an unnecesary sword."
+            "No treasure just an unnecessary sword."
         ),(
             {'size': 5,'entrance': (1, 1),'exit': (4, 0), 'sword': (4, 4), 'dragon': (4,1), 'treasure': [(0, 1), (1, 0), (2, 1)], 'walls': [(1, 3), (2, 3), (3, 3), (4, 3)]},
             "22",
