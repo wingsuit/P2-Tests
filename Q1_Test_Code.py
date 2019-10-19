@@ -1,4 +1,3 @@
-from Q1 import build_cave
 import time
 
 def run_test(num, data, expected, explanation):
