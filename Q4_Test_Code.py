@@ -16,7 +16,7 @@ def test():
             "23",
             "Example 1"
         ),(
-            {'size': 5,'entrance': (0, 2),'exit': (0, 4),'sword': (0, 0),'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
+            {'size': 5,'entrance': (0, 2),'exit': (0, 4),'sword': (0, 0), 'dragon': (2, 1),'treasure': [(0, 3), (4, 1)],'walls': [(1, 0), (2, 0), (3, 0), (1, 2), (2, 2), (3, 2), (1, 3), (2, 3), (3, 3)]},
             "14",
             "Example 2"
         ),(
@@ -31,6 +31,10 @@ def test():
             {'size': 5,'entrance': (1, 1),'exit': (4, 0), 'sword': (4, 4), 'dragon': (4,1), 'treasure': [(0, 1), (1, 0), (2, 1)], 'walls': [(1, 3), (2, 3), (3, 3), (4, 3)]},
             "22",
             "Complicated cave."
+        ),(
+            {'size': 5,'entrance': (1, 1),'exit': (4, 0), 'sword': (4, 4), 'dragon': (4,1), 'treasure': [(3, 0), (1, 0), (2, 1)], 'walls': [(1, 3), (2, 3), (3, 3), (4, 3)]},
+            "22",
+            "Even more complicated cave. Essential to prioritise"
         ),(
             {'size': 5,'entrance': (1, 0),'exit': (4, 4),'sword': (4, 0),'dragon': (1, 2),'treasure': [(0, 0), (0, 4)]},
             '15',

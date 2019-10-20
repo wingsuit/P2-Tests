@@ -45,6 +45,15 @@ def test():
             {'size': 4,'entrance': (0, 0),'exit': (2, 1),'dragon': (3, 2),'sword': [(3, 3)],'treasure': [(1, 3)],'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
             "None",
             "Sword not given as tuple"
+        ),(
+            {'size': 4, 'entrance': (0, 0), 'exit': (2, 1), 'dragon': (1, 1),
+             'sword': (3, 3), 'treasure': [(1, 2), (1, 3)], 'walls': [(2, 3)]},
+            "None",
+            "Dragon diagonal from entrance"
+        ),(
+            {'size': 4,'entrance': (0, 0),'exit': (2, 1),'dragon': (3, 2),'sword': (3, 3),'treasure': (1, 3),'walls': [(1, 1), (1, 2), (2, 2), (2, 3)]},
+            "None",
+            "Treasure not given as list"
         )
     ]
     
@@ -54,5 +63,6 @@ def test():
     for data, expected, explanation in tests:
         run_test(num, data, expected, explanation)
         num += 1
+
 
 test()
